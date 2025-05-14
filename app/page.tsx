@@ -18,6 +18,9 @@ function SpecificTypeRating(drink: Drink) {
   if (drink.juice) {
     return "Sweetness Rating";
   }
+  if (drink.NA) {
+    return "Similarity Rating";
+  }
 }
 export default function HomePage() {
   const [filters, setFilters] = useState({
@@ -65,8 +68,8 @@ export default function HomePage() {
             <h2 className="text-lg font-semibold">{drink.name}</h2>
             <p className="text-sm text-gray-600">
               {drink.brand} • {drink.carbonated ? "Carbonated" : "Still"}{" "}
-              {drink.juice ? "• Juice" : ""} •{" "}
-              {computeCompositeScore(drink).toFixed(2)}⭐
+              {drink.juice ? "• Juice" : ""} • {drink.NA ? "• NA Beverage" : ""}{" "}
+              • {computeCompositeScore(drink).toFixed(2)}⭐
             </p>
           </div>
         ))}

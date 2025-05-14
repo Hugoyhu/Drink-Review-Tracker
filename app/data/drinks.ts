@@ -3,6 +3,7 @@ export type Drink = {
   brand: string;
   carbonated: boolean;
   juice: boolean;
+  NA: boolean;
   specificRating: number;
   realFlavorRating: number;
   adFlavorRating: number;
@@ -16,6 +17,7 @@ export const drinks: Drink[] = [
     brand: "Spindrift",
     carbonated: true,
     juice: false,
+    NA: false,
     specificRating: 4,
     realFlavorRating: 7,
     adFlavorRating: 7,
@@ -28,6 +30,7 @@ export const drinks: Drink[] = [
     brand: "Spindrift",
     carbonated: true,
     juice: false,
+    NA: false,
     specificRating: 4,
     realFlavorRating: 8,
     adFlavorRating: 8,
@@ -40,18 +43,20 @@ export const drinks: Drink[] = [
     brand: "Spindrift",
     carbonated: true,
     juice: false,
+    NA: false,
     specificRating: 4,
-    realFlavorRating: 3,
+    realFlavorRating: 5,
     adFlavorRating: 3,
     image: "/images/spindrift-cosnopolitanTM.png",
     review:
-      "Cosnopolitan™ is one of the worst spindrift flavors out there. Imagine Ocean Spray, but sour and without any sugar. That's Cosnopolitan™ Spindrift. Do yourself a favor and dilute some cranberry juice with plain seltzer.",
+      "Cosnopolitan™ is just fine. Imagine Ocean Spray, but sour and without any sugar. That's Cosnopolitan™ Spindrift. Do yourself a favor and dilute some cranberry juice with plain seltzer. Or buy some orange juice.",
   },
   {
     name: "Pineapple Spindrift",
     brand: "Spindrift",
     carbonated: true,
     juice: false,
+    NA: false,
     specificRating: 4,
     realFlavorRating: 8,
     adFlavorRating: 7,
@@ -64,6 +69,7 @@ export const drinks: Drink[] = [
     brand: "Spindrift",
     carbonated: true,
     juice: false,
+    NA: false,
     specificRating: 4,
     realFlavorRating: 8,
     adFlavorRating: 6,
@@ -76,6 +82,7 @@ export const drinks: Drink[] = [
     brand: "Spindrift",
     carbonated: true,
     juice: false,
+    NA: false,
     specificRating: 4,
     realFlavorRating: 2,
     adFlavorRating: 3,
@@ -88,6 +95,7 @@ export const drinks: Drink[] = [
     brand: "Spindrift",
     carbonated: true,
     juice: false,
+    NA: false,
     specificRating: 4,
     realFlavorRating: 6,
     adFlavorRating: 6,
@@ -100,48 +108,78 @@ export const drinks: Drink[] = [
     brand: "Good & Gather (Target)",
     carbonated: true,
     juice: false,
+    NA: false,
     specificRating: 2.5,
     realFlavorRating: 0,
     adFlavorRating: 0,
     image: "/images/target-peachbellini.jpeg",
     review:
-      "G&G Peach Bellini is one of the worst 'flavored' seltzers out there. It sounds like a great flavor until you try it - there is no flavor. You get the whiff of what you're missing out on, and you're gaslit into thinking there's flavor there (there's not). For an unflavored 'flavored' seltzer, it's not even a good one at that.",
+      "G&G Peach Bellini is one of the worst 'flavored' seltzers out there. It sounds like a great flavor until you try it - there is no flavor. You get the whiff of what you're missing out on, and you're gaslit into thinking there's flavor there (there's not). For an unflavored 'flavored' seltzer, it's not even a good one at that. Has a slightly sweet but indiscernible taste.",
   },
   {
     name: "G&G Ginger Peach",
     brand: "Good & Gather (Target)",
     carbonated: true,
     juice: false,
+    NA: false,
     specificRating: 2.5,
     realFlavorRating: 0,
     adFlavorRating: 0,
     image: "/images/target-gingerpeach.jpeg",
     review:
-      "G&G Ginger Peach is one of the worst 'flavored' seltzers out there. It sounds like a great flavor until you try it - there is no flavor. You get the whiff of what you're missing out on, and you're gaslit into thinking there's flavor there (there's not). For an unflavored 'flavored' seltzer, it's not even a good one at that.",
+      "G&G Ginger Peach is one of the worst 'flavored' seltzers out there. It sounds like a great flavor until you try it - there is no flavor. You get the whiff of what you're missing out on, and you're gaslit into thinking there's flavor there (there's not). For an unflavored 'flavored' seltzer, it's not even a good one at that. Has a slightly sweet but indiscernible taste.",
   },
   {
     name: "G&G Pomegranate Dragon Fruit",
     brand: "Good & Gather (Target)",
     carbonated: true,
     juice: false,
+    NA: false,
     specificRating: 2.5,
     realFlavorRating: 0,
     adFlavorRating: 0,
     image: "/images/target-pomegranate.jpeg",
     review:
-      "G&G Peach Bellini is one of the worst 'flavored' seltzers out there. It sounds like a great flavor until you try it - there is no flavor. You get the whiff of what you're missing out on, and you're gaslit into thinking there's flavor there (there's not). For an unflavored 'flavored' seltzer, it's not even a good one at that.",
+      "G&G Peach Bellini is one of the worst 'flavored' seltzers out there. It sounds like a great flavor until you try it - there is no flavor. You get the whiff of what you're missing out on, and you're gaslit into thinking there's flavor there (there's not). For an unflavored 'flavored' seltzer, it's not even a good one at that. Has a slightly sweet but indiscernible taste.",
   },
   {
     name: "G&G Strawberry Mango",
     brand: "Good & Gather (Target)",
     carbonated: true,
     juice: false,
+    NA: false,
     specificRating: 2.5,
     realFlavorRating: 0,
     adFlavorRating: 0,
     image: "/images/target-strawberrymango.jpeg",
     review:
-      "G&G Strawberry Mango is one of the worst 'flavored' seltzers out there. It sounds like a great flavor until you try it - there is no flavor. You get the whiff of what you're missing out on, and you're gaslit into thinking there's flavor there (there's not). For an unflavored 'flavored' seltzer, it's not even a good one at that.",
+      "G&G Strawberry Mango is one of the worst 'flavored' seltzers out there. It sounds like a great flavor until you try it - there is no flavor. You get the whiff of what you're missing out on, and you're gaslit into thinking there's flavor there (there's not). For an unflavored 'flavored' seltzer, it's not even a good one at that. Has a slightly sweet but indiscernible taste.",
+  },
+  {
+    name: "Heineken 0.0",
+    brand: "Heineken",
+    carbonated: false,
+    juice: false,
+    NA: true,
+    specificRating: 5,
+    realFlavorRating: 7,
+    adFlavorRating: 6,
+    image: "/images/heineken-zero.png",
+    review:
+      "Heineken 0.0 tastes fine. It doesn't taste entirely like liquid wheat, has decent flavor and foams easily.",
+  },
+  {
+    name: "Budweiser 0.0",
+    brand: "Budweiser",
+    carbonated: false,
+    juice: false,
+    NA: true,
+    specificRating: 3,
+    realFlavorRating: 3,
+    adFlavorRating: 3,
+    image: "/images/budweiser-zero.png",
+    review:
+      "Budweiser 0.0 is underwhelming. Tastes a lot like wheat and doesn't have much flavor to it.",
   },
 ];
 
