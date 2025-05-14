@@ -41,8 +41,8 @@ export const drinks: Drink[] = [
     carbonated: true,
     juice: false,
     specificRating: 4,
-    realFlavorRating: 2,
-    adFlavorRating: 2,
+    realFlavorRating: 3,
+    adFlavorRating: 3,
     image: "/images/spindrift-cosnopolitanTM.png",
     review:
       "Cosnopolitan™ is one of the worst spindrift flavors out there. Imagine Ocean Spray, but sour and without any sugar. That's Cosnopolitan™ Spindrift. Do yourself a favor and dilute some cranberry juice with plain seltzer.",
@@ -70,6 +70,78 @@ export const drinks: Drink[] = [
     image: "/images/spindrift-mango.png",
     review:
       "Mango Orange does not taste like orange. It smells like orange, but tastes like mango. I think that's a good thing. It's well flavored. Like all spindrift flavors, it's not heavily carbonated but still has a light kick.",
+  },
+  {
+    name: "Raspberry Lime Spindrift",
+    brand: "Spindrift",
+    carbonated: true,
+    juice: false,
+    specificRating: 4,
+    realFlavorRating: 2,
+    adFlavorRating: 3,
+    image: "/images/spindrift-raspberry.png",
+    review:
+      "Raspberry Lime Spindrift has no flavor. At best, you can imagine the taste of the water used to wash raspberries. You might as well get plain seltzer and use frozen raspberries as ice cubes while you drink, and I'm sure you'd get more flavor.",
+  },
+  {
+    name: "Island Punch Spindrift",
+    brand: "Spindrift",
+    carbonated: true,
+    juice: false,
+    specificRating: 4,
+    realFlavorRating: 6,
+    adFlavorRating: 6,
+    image: "/images/spindrift-islandpunch.png",
+    review:
+      "Island Punch tastes similar to actual punch, without the sickening sweetness. You can taste the guava and a bit of passionfruit. It's a bit tart. Like all spindrift flavors, it's not heavily carbonated but still has a light kick.",
+  },
+  {
+    name: "G&G Peach Bellini",
+    brand: "Good & Gather (Target)",
+    carbonated: true,
+    juice: false,
+    specificRating: 2.5,
+    realFlavorRating: 0,
+    adFlavorRating: 0,
+    image: "/images/target-peachbellini.jpeg",
+    review:
+      "G&G Peach Bellini is one of the worst 'flavored' seltzers out there. It sounds like a great flavor until you try it - there is no flavor. You get the whiff of what you're missing out on, and you're gaslit into thinking there's flavor there (there's not). For an unflavored 'flavored' seltzer, it's not even a good one at that.",
+  },
+  {
+    name: "G&G Ginger Peach",
+    brand: "Good & Gather (Target)",
+    carbonated: true,
+    juice: false,
+    specificRating: 2.5,
+    realFlavorRating: 0,
+    adFlavorRating: 0,
+    image: "/images/target-gingerpeach.jpeg",
+    review:
+      "G&G Ginger Peach is one of the worst 'flavored' seltzers out there. It sounds like a great flavor until you try it - there is no flavor. You get the whiff of what you're missing out on, and you're gaslit into thinking there's flavor there (there's not). For an unflavored 'flavored' seltzer, it's not even a good one at that.",
+  },
+  {
+    name: "G&G Pomegranate Dragon Fruit",
+    brand: "Good & Gather (Target)",
+    carbonated: true,
+    juice: false,
+    specificRating: 2.5,
+    realFlavorRating: 0,
+    adFlavorRating: 0,
+    image: "/images/target-pomegranate.jpeg",
+    review:
+      "G&G Peach Bellini is one of the worst 'flavored' seltzers out there. It sounds like a great flavor until you try it - there is no flavor. You get the whiff of what you're missing out on, and you're gaslit into thinking there's flavor there (there's not). For an unflavored 'flavored' seltzer, it's not even a good one at that.",
+  },
+  {
+    name: "G&G Strawberry Mango",
+    brand: "Good & Gather (Target)",
+    carbonated: true,
+    juice: false,
+    specificRating: 2.5,
+    realFlavorRating: 0,
+    adFlavorRating: 0,
+    image: "/images/target-strawberrymango.jpeg",
+    review:
+      "G&G Strawberry Mango is one of the worst 'flavored' seltzers out there. It sounds like a great flavor until you try it - there is no flavor. You get the whiff of what you're missing out on, and you're gaslit into thinking there's flavor there (there's not). For an unflavored 'flavored' seltzer, it's not even a good one at that.",
   },
 ];
 

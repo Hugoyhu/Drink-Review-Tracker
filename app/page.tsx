@@ -64,7 +64,8 @@ export default function HomePage() {
           >
             <h2 className="text-lg font-semibold">{drink.name}</h2>
             <p className="text-sm text-gray-600">
-              {drink.brand} • {drink.carbonated ? "Carbonated" : "Still"} •{" "}
+              {drink.brand} • {drink.carbonated ? "Carbonated" : "Still"}{" "}
+              {drink.juice ? "• Juice" : ""} •{" "}
               {computeCompositeScore(drink).toFixed(2)}⭐
             </p>
           </div>
