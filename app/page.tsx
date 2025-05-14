@@ -27,6 +27,7 @@ export default function HomePage() {
     spindrift: true,
     sanpellegrino: true,
     carbonatedOnly: false,
+    NAOnly: false,
   });
 
   const [selectedDrink, setSelectedDrink] = useState<Drink | null>(null);
@@ -37,8 +38,8 @@ export default function HomePage() {
   const filteredDrinks = drinks
     .filter((drink) => {
       const carbonatedMatch = !filters.carbonatedOnly || drink.carbonated;
-
-      return carbonatedMatch;
+      const NAMatch = !filters.NAOnly || !drink.NA;
+      return carbonatedMatch && NAMatch;
     })
     .sort((a, b) => computeCompositeScore(b) - computeCompositeScore(a));
 
@@ -55,6 +56,16 @@ export default function HomePage() {
             className="mr-2"
           />
           Carbonated Only
+        </label>
+
+        <label>
+          <input
+            type="checkbox"
+            checked={filters.NAOnly}
+            onChange={() => toggleFilter("NAOnly")}
+            className="mr-2"
+          />
+          Exclude Mocktails / NA Alcohols
         </label>
       </div>
 
