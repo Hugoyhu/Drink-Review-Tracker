@@ -3,6 +3,8 @@
 import { useState } from "react";
 import Footer from "./components/Footer";
 
+import "@/app/globals.css";
+
 import {
   Drink,
   drinks,
@@ -10,22 +12,27 @@ import {
   computeCompositeScore,
 } from "./data/drinks";
 import Image from "next/image";
+import Link from "next/link";
 
 function SpecificTypeRating(drink: Drink) {
-  if (drink.carbonated) {
+  if (drink.type === "Carbonated") {
     return "Carbonation Rating";
   }
-  if (drink.juice) {
+  if (drink.type === "Non-Alcoholic") {
+    return "Similarity Rating";
+  }
+  if (drink.type === "Juice") {
     return "Sweetness Rating";
   }
-  if (drink.NA) {
-    return "Similarity Rating";
+  if (drink.type === "Tea") {
+    return "Tea Rating";
+  }
+  if (drink.type === "Essenced Water") {
+    return "Crispness Rating";
   }
 }
 export default function HomePage() {
   const [filters, setFilters] = useState({
-    spindrift: true,
-    sanpellegrino: true,
     carbonatedOnly: false,
     NAOnly: false,
   });
@@ -37,14 +44,26 @@ export default function HomePage() {
 
   const filteredDrinks = drinks
     .filter((drink) => {
-      const carbonatedMatch = !filters.carbonatedOnly || drink.carbonated;
-      const NAMatch = !filters.NAOnly || !drink.NA;
+      const carbonatedMatch =
+        !filters.carbonatedOnly || drink.type === "Carbonated";
+      const NAMatch = !filters.NAOnly || !(drink.type === "Non-Alcoholic");
       return carbonatedMatch && NAMatch;
     })
     .sort((a, b) => computeCompositeScore(b) - computeCompositeScore(a));
 
   return (
     <div className="p-6 max-w-3xl mx-auto">
+      <div className="absolute top-4 right-4 z-50">
+        <Link href="https://hugohu.me">
+          <button className="px-4 py-2 bg-[#e8e3d4] text-black text-lg font-headline rounded-md hover:bg-[#cfc9b7] transition">
+            Home
+          </button>
+        </Link>
+      </div>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
       <h1 className="text-3xl font-bold mb-4">🥤 Drink Review Tracker</h1>
 
       <div className="flex flex-wrap gap-4 mb-6">
@@ -55,7 +74,7 @@ export default function HomePage() {
             onChange={() => toggleFilter("carbonatedOnly")}
             className="mr-2"
           />
-          Carbonated Only
+          <p>Carbonated Only</p>
         </label>
 
         <label>
@@ -65,7 +84,7 @@ export default function HomePage() {
             onChange={() => toggleFilter("NAOnly")}
             className="mr-2"
           />
-          Exclude Mocktails / NA Alcohols
+          <p>Exclude Mocktails / NA Alcohols</p>
         </label>
       </div>
 
@@ -78,8 +97,7 @@ export default function HomePage() {
           >
             <h2 className="text-lg font-semibold">{drink.name}</h2>
             <p className="text-sm text-gray-600">
-              {drink.brand} • {drink.carbonated ? "Carbonated" : "Still"}{" "}
-              {drink.juice ? "• Juice" : ""} {drink.NA ? "• NA Beverage" : ""} •{" "}
+              {drink.brand} • {drink.type} •{" "}
               {computeCompositeScore(drink).toFixed(2)}⭐
             </p>
           </div>
@@ -99,7 +117,7 @@ export default function HomePage() {
               />
             </div>
             <div className="w-2/3">
-              <h2 className="text-xl font-bold mb-1">{selectedDrink.name}</h2>
+              <h3 className="text-xl font-bold mb-1">{selectedDrink.name}</h3>
               <p className="text-gray-700 mb-1">
                 <strong>Brand:</strong> {selectedDrink.brand}
               </p>
@@ -119,6 +137,7 @@ export default function HomePage() {
                 <strong>Similarity to Advertised Flavor:</strong>{" "}
                 {selectedDrink.adFlavorRating}/{ratingScale}
               </p>
+              <br></br>
               <p className="text-gray-700 mb-3">{selectedDrink.review}</p>
               <button
                 className="absolute top-2 right-2 text-gray-500 hover:text-gray-800"
