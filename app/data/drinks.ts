@@ -188,6 +188,50 @@ export const drinks: Drink[] = [
     review:
       "Hint is surprisingly good. The scent smells overly bold for a 'flavor infused water', but you can very much taste crisp and light apple notes.",
   },
+  {
+    name: "Hint Grape",
+    brand: "Hint",
+    type: "Essenced Water",
+    specificRating: 6,
+    realFlavorRating: 4,
+    adFlavorRating: 5,
+    image: src + "hint-grape.jpg",
+    review:
+      "Hint Grape tastes a bit like those soft artificial grape gummy candies, but as a water. Delicious.",
+  },
+  {
+    name: "Trader Joes Watermelon Lemonade Sparkling Water",
+    brand: "Trader Joes",
+    type: "Carbonated",
+    specificRating: 2,
+    realFlavorRating: 2,
+    adFlavorRating: 3,
+    image: src + "TJ-Watermelon-Lemonade.png",
+    review:
+      "It's just okay. Weak carbonation, a light taste of watermelon and lemon. It's not bad, it's just boring.",
+  },
+  {
+    name: "Trader Joes Raspberry Lime Sparkling Water",
+    brand: "Trader Joes",
+    type: "Carbonated",
+    specificRating: 2,
+    realFlavorRating: 3,
+    adFlavorRating: 3,
+    image: src + "TJ-Raspberry-Lime.png",
+    review:
+      "Weak carbonation, essence of raspberry and lime. Go with Spindrift Raspberry Lime.",
+  },
+  {
+    name: "Trader Joes Cranberry Clementine Sparkling Water",
+    brand: "Trader Joes",
+    type: "Carbonated",
+    specificRating: 2,
+    realFlavorRating: 3,
+    adFlavorRating: 3,
+    image: src + "TJ-Cranberry-Clementine.png",
+    review:
+      "Weak carbonation, clementine and cranberry taste is faint. A bit boring.",
+  },
 ];
 
 export const ratingScale = 10;
